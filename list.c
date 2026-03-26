@@ -90,9 +90,9 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     if(list->current == NULL) return;
-    Nodo* aux = list->current;
-    Nodo* izq = aux->prev;
-    Nodo* der = aux->next;
+    Node* aux = list->current;
+    Node* izq = aux->prev;
+    Node* der = aux->next;
 
     if (izq != NULL){
         izq->next = der;
@@ -103,7 +103,6 @@ void * popCurrent(List * list) {
 
     list->current = der;
     free(aux);
-    list->size--;
 }
 
 void cleanList(List * list) {
