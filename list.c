@@ -102,11 +102,15 @@ void * popCurrent(List * list) {
     }
     else
     {
-        list-> head = der;
+        list->head = der;
     }
     if (der != NULL)
     {
         der->prev = izq;
+    }
+    else
+    {
+        list->tail = izq;
     }
 
     list->current = der;
