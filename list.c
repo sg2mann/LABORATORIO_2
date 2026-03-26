@@ -96,26 +96,26 @@ void * popCurrent(List * list) {
 
     void* data = aux->data; // guardamos el dato para despues mostrarlo
 
-    if (izq != NULL)
+    if (izq != NULL) // si el de la izqueierda es distinto de vacio
     {
-        izq->next = der;
+        izq->next = der;  // el next del nodo izquierdo apunta al nodo derecho
     }
-    else
+    else  // sino
     {
-        list->head = der;
+        list->head = der; // la cabeza ahora sera el nodo derecho
     }
-    if (der != NULL)
+    if (der != NULL) // si el de la derecha esta no esta vacio
     {
-        der->prev = izq;
+        der->prev = izq; // el anterior de la derecha apunta al nodo de la izquierda
     }
-    else
+    else // sino
     {
-        list->tail = izq;
+        list->tail = izq; // el ultimo sera el nodo izquierdo
     }
 
-    list->current = der;
-    free(aux);
-    return data;
+    list->current = der; // el nuevo current pasa a ser el siguiente dato del nodo
+    free(aux); // liberamos
+    return data; //retornamos el dato del current eliminado
 }
 
 void cleanList(List * list) {
