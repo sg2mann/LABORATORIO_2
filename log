@@ -1,0 +1,46 @@
+Thu Mar 26 07:20:26 PM UTC 2026: 
+ list.c | 82 +++++++++++++-----------------------------------------------------
+ 1 file changed, 16 insertions(+), 66 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:92:31: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   92 |     if(list->current == NULL) return;
+      |                               ^~~~~~
+list.c:91:8: note: declared here
+   91 | void * popCurrent(List * list) {
+      |        ^~~~~~~~~~
+list.c:93:5: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+   93 |     Nodo* aux = list->current;
+      |     ^~~~
+      |     Node
+list.c:93:17: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Wincompatible-pointer-types]
+   93 |     Nodo* aux = list->current;
+      |                 ^~~~
+list.c:94:5: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+   94 |     Nodo* izq = aux->prev;
+      |     ^~~~
+      |     Node
+list.c:94:20: error: request for member ‘prev’ in something not a structure or union
+   94 |     Nodo* izq = aux->prev;
+      |                    ^~
+list.c:95:5: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+   95 |     Nodo* der = aux->next;
+      |     ^~~~
+      |     Node
+list.c:95:20: error: request for member ‘next’ in something not a structure or union
+   95 |     Nodo* der = aux->next;
+      |                    ^~
+list.c:98:12: error: request for member ‘next’ in something not a structure or union
+   98 |         izq->next = der;
+      |            ^~
+list.c:101:12: error: request for member ‘prev’ in something not a structure or union
+  101 |         der->prev = izq;
+      |            ^~
+list.c:104:19: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  104 |     list->current = der;
+      |                   ^
+list.c:106:9: error: ‘List’ {aka ‘struct List’} has no member named ‘size’
+  106 |     list->size--;
+      |         ^~
+8c59c13
