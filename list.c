@@ -94,7 +94,7 @@ void * popCurrent(List * list) {
     Node* izq = aux->prev; // nodo izquierdo al current
     Node* der = aux->next; // nodo derecho al current
 
-    void* data = aux->data; // guardamos el dato para despues mostrarlo
+    void* dato = aux->data; // guardamos el dato para despues mostrarlo
 
     if (izq != NULL) // si el de la izqueierda es distinto de vacio
     {

@@ -86,3 +86,22 @@ Thu Mar 26 07:51:20 PM UTC 2026:
  tests:  1|5
 total_score: 10/60
 57f0092
+Sun Mar 29 04:36:13 AM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:118:12: error: ‘data’ undeclared (first use in this function); did you mean ‘dato’?
+  118 |     return data; //retornamos el dato del current eliminado
+      |            ^~~~
+      |            dato
+list.c:118:12: note: each undeclared identifier is reported only once for each function it appears in
+list.c:97:11: error: unused variable ‘dato’ [-Werror=unused-variable]
+   97 |     void* dato = aux->data; // guardamos el dato para despues mostrarlo
+      |           ^~~~
+list.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+1646f54
