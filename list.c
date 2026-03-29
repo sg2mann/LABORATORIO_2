@@ -73,7 +73,7 @@ void * prevList(List * list) {
 // Puede utilizar la función Node* createNode(void * data) la cual crea, incializa y retorna un nodo con el dato correspondiente.
 
 void pushFront(List * lista, void * data) {
-    Node * nuevoNodo = createNode();
+    Node * nuevoNodo = createNode(data);
     if(lista->head == NULL)
     {
         lista->head = nuevoNodo;

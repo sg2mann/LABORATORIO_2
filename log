@@ -179,3 +179,14 @@ list.c:92:22: error: ‘a’ undeclared (first use in this function)
       |                      ^
 list.c:92:22: note: each undeclared identifier is reported only once for each function it appears in
 88787f7
+Sun Mar 29 05:26:38 AM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:92:22: error: ‘a’ undeclared (first use in this function)
+   92 |     lista->current = a->tail;
+      |                      ^
+list.c:92:22: note: each undeclared identifier is reported only once for each function it appears in
+ba7321e
