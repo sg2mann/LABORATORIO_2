@@ -115,7 +115,7 @@ void * popCurrent(List * list) {
 
     list->current = der; // el nuevo current pasa a ser el siguiente dato del nodo
     free(aux); // liberamos
-    return data; //retornamos el dato del current eliminado
+    return dato; //retornamos el dato del current eliminado
 }
 
 void cleanList(List * list) {
