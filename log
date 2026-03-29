@@ -161,3 +161,21 @@ Sun Mar 29 05:10:28 AM UTC 2026:
  tests:  6|3
 total_score: 30/60
 7758abf
+Sun Mar 29 05:24:13 AM UTC 2026: 
+ list.c | 21 +++++++++++++++++----
+ 1 file changed, 17 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:76:24: error: too few arguments to function ‘createNode’
+   76 |     Node * nuevoNodo = createNode();
+      |                        ^~~~~~~~~~
+list.c:22:8: note: declared here
+   22 | Node * createNode(void * data) {
+      |        ^~~~~~~~~~
+list.c: In function ‘pushBack’:
+list.c:92:22: error: ‘a’ undeclared (first use in this function)
+   92 |     lista->current = a->tail;
+      |                      ^
+list.c:92:22: note: each undeclared identifier is reported only once for each function it appears in
+88787f7
