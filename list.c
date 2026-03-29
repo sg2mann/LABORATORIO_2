@@ -89,7 +89,7 @@ void pushFront(List * lista, void * data) {
 }
 
 void pushBack(List * lista, void * data) {
-    lista->current = a->tail;
+    lista->current = lista->tail;
     pushCurrent(lista,data);
 }
 
